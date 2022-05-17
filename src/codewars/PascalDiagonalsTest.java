@@ -11,10 +11,8 @@ public class PascalDiagonalsTest {
     @DisplayName("Pascal Diagonals Test")
     @Test
     public void test() {
-        long[] base = new long[]{1, 2, 1};
-        assertArrayEquals(base, PascalDiagonals.generateDiagonal(2, 10));
+        long[] base = new long[]{1, 3, 6, 10, 15};
+        assertArrayEquals(base, PascalDiagonals.generateDiagonal(2, 5));
 
-        base = new long[]{1, 5, 10, 10, 5, 1};
-        assertArrayEquals(base, PascalDiagonals.generateDiagonal(5, 10));
     }
 }

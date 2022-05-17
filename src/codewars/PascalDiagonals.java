@@ -9,9 +9,11 @@ public class PascalDiagonals {
             return new long[] {};
         }
 
-        long[][] triangle = new long[l][l];
+        int arrLen = n + l;
 
-        for (int i = 0; i < l; i++) {
+        long[][] triangle = new long[arrLen][arrLen];
+
+        for (int i = 0; i < arrLen; i++) {
                 for (int j = 0; j < i + 1; j++) {
                     if (i == 0 ) {
                         if (triangle[0][0] != 1){
@@ -35,8 +37,13 @@ public class PascalDiagonals {
         }
 
         long[] arr = new long[l];
+        int index = 0;
+        int row = n;
         for (int i = 0; i < l; i++) {
-            arr[i] = triangle[n][i];
+            arr[index] = triangle[row][i];
+            System.out.println(arr[index]);
+            index += 1;
+            row += 1;
         }
 
         return arr;
